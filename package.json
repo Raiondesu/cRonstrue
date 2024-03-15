@@ -33,6 +33,40 @@
   "files": [
     "src/"
   ],
+  "exports": {
+    ".": {
+      "import": "./src/cronstrue.ts",
+      "types": "./src/cronstrue.ts"
+    },
+    "./index": {
+      "import": "./src/cronstrue.ts",
+      "types": "./src/cronstrue.ts"
+    },
+    "./*": {
+      "import": "./src/*.ts",
+      "types": "./src/*.ts"
+    },
+    "./locales/*": {
+      "import": "./src/i18n/locales/*.ts",
+      "types": "./src/i18n/locales/*.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./src/cronstrue.ts"
+      ],
+      "index": [
+        "./src/cronstrue.ts"
+      ],
+      "*": [
+        "./src/*"
+      ],
+      "locales/*": [
+        "./src/i18n/locales/*"
+      ]
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bradymholt/cronstrue.git"
